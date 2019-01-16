@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RestfulXamrinApp.GenerateToken">
+    <ContentPage.Content>
+        <TableView  >
+            <TableRoot Title="LOG" >
+                <TableSection Title="Login" >
+                    <EntryCell Label="NAame:-" Placeholder=" Enter Username" x:Name="ent1"></EntryCell>
+                    <EntryCell Label="Password:-" Placeholder=" passowrd"  x:Name="ent2"></EntryCell>
+                    <ViewCell>
+                        <Button HorizontalOptions="Center" Text="Generate"  Clicked="Button_Clicked" VerticalOptions="Center"></Button>
+                    </ViewCell>
+                </TableSection>
+                
+            </TableRoot>
+        </TableView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RestfulXamrinApp.tab"
+            xmlns:local="clr-namespace:RestfulXamrinApp"
+
+           xmlns:image1="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin">
+    <local:MainPage Title="RestService" Icon="postman.png"></local:MainPage>
+
+    <ContentPage Title="Whtsapp" Icon="faceboo.png" >
+       
+       
+        <Grid BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                
+            </Grid.RowDefinitions>
+            <StackLayout HorizontalOptions="Center" Orientation="Horizontal" Margin="0,10,0,0">
+                <Label Text="Slected Language" FontSize="16"></Label>
+                <Image Source="arrow.png" VerticalOptions="Start"></Image>
+            </StackLayout>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"></RowDefinition>
+                    <RowDefinition Height="20"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="70"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                </Grid.RowDefinitions>
+                <image1:CircleImage Source="faceboo.png" BorderThickness="1" BorderColor="Red"  HeightRequest="150" WidthRequest="100" HorizontalOptions="Center"></image1:CircleImage>
+                <Label Grid.Row="1" Text="Welcome to this page "  HorizontalOptions="Center" FontSize="14"></Label>
+                <Entry Grid.Row="2" Placeholder="Username" PlaceholderColor="LightGray"  FontSize="18"></Entry>
+                <Entry Grid.Row="3" Placeholder="password"  PlaceholderColor="LightGray" FontSize="18"></Entry>
+                <Button Grid.Row="4" BackgroundColor="LightSkyBlue"  VerticalOptions="Start" TextColor="white" FontSize="16" HeightRequest="50" Text=" Login"></Button>
+                <Label Text="Trouble in logging in? Get help" Grid.Row="5" Margin="0,12,0,0" HorizontalOptions="Center"></Label>
+                <Grid Grid.Row="6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"> </ColumnDefinition>
+                        <ColumnDefinition Width="AUTO"></ColumnDefinition>
+                        <ColumnDefinition Width="*"> </ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Column="0"  BackgroundColor="Black"  HeightRequest="1" VerticalOptions="Center" HorizontalOptions="FillAndExpand"></Label>
+                    <Label  Grid.Column="1" Text="OR"  HorizontalOptions="Center"  VerticalOptions="Center"></Label>
+                    <Label  Grid.Column="2" BackgroundColor="Black"  HeightRequest="1"  VerticalOptions="Center" HorizontalOptions="FillAndExpand"></Label>
+                </Grid>
+                <StackLayout Grid.Row="7" Orientation="Horizontal"  HorizontalOptions="Center">
+                    <Image Source="faceboo.png"></Image>
+                    <Label Text="Try using Facebook link" FontSize="Medium" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" ></Label>
+                </StackLayout>
+            </Grid>
+            <StackLayout Grid.Row="2"  BackgroundColor="LightGray">
+                <Label BackgroundColor="Red" HeightRequest="1"></Label>
+                <Label Text="Dont you have account? signUp" FontSize="Medium"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center"></Label>
+            </StackLayout>
+          
+            </Grid>
+      
+    </ContentPage>
+    <local:GeoLocation Title="location" Icon="location.png"></local:GeoLocation>
+
+    <local:GenerateToken Title="Token" Icon="icon.jpg" ></local:GenerateToken>
+</TabbedPage>

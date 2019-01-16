@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RestfulXamrinApp"
+             x:Class="RestfulXamrinApp.MainPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add"  x:Name="menuadd" Clicked="Add_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Resources>
+       
+    </ContentPage.Resources>
+    
+        <StackLayout>
+        <!-- Place new controls here -->
+
+        <Button x:Name="btn1" Text="Call APi" Style="{StaticResource button}" Clicked="Button_Clicked"></Button>
+        <Label IsVisible="False" x:Name="label1"></Label>
+      
+            <Grid ColumnSpacing="0"  RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="AUTO"></RowDefinition>
+                    <RowDefinition Height="AUTO"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+            <!--<Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"></ColumnDefinition>
+                <ColumnDefinition Width="100"></ColumnDefinition>
+            </Grid.ColumnDefinitions>-->
+            <Image  x:Name="IMAGE1" Aspect="Fill"  Grid.Row="0" Source="icon.jpg" IsVisible="False"></Image>
+          
+                <ListView x:Name="restfullist" ItemSelected="Restfullist_ItemSelected"  Grid.Row="1">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding name}" Detail="{Binding email}">
+                        <TextCell.ContextActions>
+                            <MenuItem Clicked="MenuItem_Clicked" IsDestructive="True" Text="Delete" CommandParameter="{Binding .}"></MenuItem>
+                        </TextCell.ContextActions>
+                    </TextCell>
+                 
+                </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                </ListView>
+        
+           
+        </Grid>
+      
+    </StackLayout>
+
+</ContentPage>
